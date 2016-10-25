@@ -4355,7 +4355,7 @@ declare module "react" {
     export interface SwipeableListViewDataSource {
         cloneWithRowsAndSections(dataBlob: any,
             sectionIdentities: string[],
-            rowIdentities: Array<string[]>): SwipeableListViewDataSource;
+            rowIdentities: string[][]): SwipeableListViewDataSource;
         getDataSource(): ListViewDataSource;
         getOpenRowID(): string;
         setOpenRowID(rowID: string): ListViewDataSource;

@@ -482,7 +482,7 @@ export interface QueryOptions {
   consistency?: number;
   customPayload?: any;
   fetchSize?: number;
-  hints?: string[] | Array<string[]>;
+  hints?: string[] | string[][];
   logged?: boolean;
   pageState?: Buffer | string;
   prepare?: boolean;

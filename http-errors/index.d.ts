@@ -17,7 +17,7 @@ declare namespace createHttpError {
         // See https://github.com/Microsoft/TypeScript/issues/227#issuecomment-50092674
         [code: string]: new () => HttpError;
 
-        (...args: Array<Error | string | number | Object>): HttpError;
+        (...args: (Error | string | number | Object)[]): HttpError;
 
         Continue: new () => HttpError;
         SwitchingProtocols: new () => HttpError;
