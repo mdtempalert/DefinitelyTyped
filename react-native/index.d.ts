@@ -522,7 +522,7 @@ declare module "react" {
     export interface TransformsStyle {
 
         transform?: [{ perspective: number }, { rotate: string }, { rotateX: string }, { rotateY: string }, { rotateZ: string }, { scale: number }, { scaleX: number }, { scaleY: number }, { translateX: number }, { translateY: number }, { skewX: string }, { skewY: string }];
-        transformMatrix?: Array<number>;
+        transformMatrix?: number[];
         rotation?: number;
         scaleX?: number;
         scaleY?: number;
@@ -3654,7 +3654,7 @@ declare module "react" {
          * handle merging of old and new data separately and then pass that into
          * this function as the `dataBlob`.
          */
-        cloneWithRows<T>(dataBlob: Array<any> | { [key: string]: any }, rowIdentities?: Array<string | number>): ListViewDataSource;
+        cloneWithRows<T>(dataBlob: any[] | { [key: string]: any }, rowIdentities?: Array<string | number>): ListViewDataSource;
 
         /**
          * This performs the same function as the `cloneWithRows` function but here
@@ -3667,7 +3667,7 @@ declare module "react" {
          *
          * Note: this returns a new object!
          */
-        cloneWithRowsAndSections(dataBlob: Array<any> | { [key: string]: any }, sectionIdentities?: Array<string | number>, rowIdentities?: Array<Array<string | number>>): ListViewDataSource;
+        cloneWithRowsAndSections(dataBlob: any[] | { [key: string]: any }, sectionIdentities?: Array<string | number>, rowIdentities?: Array<Array<string | number>>): ListViewDataSource;
 
         getRowCount(): number;
 
@@ -3691,7 +3691,7 @@ declare module "react" {
         /**
          * Returns an array containing the number of rows in each section
          */
-        getSectionLengths(): Array<number>;
+        getSectionLengths(): number[];
 
         /**
          * Returns if the section header is dirtied and needs to be rerendered
@@ -4354,8 +4354,8 @@ declare module "react" {
      */
     export interface SwipeableListViewDataSource {
         cloneWithRowsAndSections(dataBlob: any,
-            sectionIdentities: Array<string>,
-            rowIdentities: Array<Array<string>>): SwipeableListViewDataSource;
+            sectionIdentities: string[],
+            rowIdentities: Array<string[]>): SwipeableListViewDataSource;
         getDataSource(): ListViewDataSource;
         getOpenRowID(): string;
         setOpenRowID(rowID: string): ListViewDataSource;
