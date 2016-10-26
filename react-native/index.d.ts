@@ -4161,11 +4161,10 @@ declare module "react" {
     }
 
     export interface Route {
-        component?: React.ComponentClass<ViewProperties>;
-        id?: string;
-        title?: string;
+        component?: React.ComponentClass<ViewProperties>
+        id?: string
+        title?: string
         passProps?: Object;
-        name: string;
 
         //anything else
         [key: string]: any
